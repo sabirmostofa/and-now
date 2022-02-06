@@ -1,6 +1,6 @@
 
 
-import i18next from 'https://deno.land/x/i18next/index.js'
+
 // or import i18next from 'https://raw.githubusercontent.com/i18next/i18next/master/src/index.js'
 // or import i18next from 'https://cdn.jsdelivr.net/gh/i18next/i18next/src/index.js'
 
@@ -53,4 +53,40 @@ window.addEventListener('DOMContentLoaded', event => {
         elements: '#portfolio a.portfolio-box'
     });
 
+});
+
+/*
+jquery
+*/
+
+$(document).ready(function(){
+
+    $('[sprache="en"]').each(function(){
+       $(this).hide();
+    })
+
+    $('#langselector').on('change', function() {
+ 
+      if ( this.value == 'en')
+      {
+        
+             
+        $('[sprache="en"]').each(function(){
+            $(this).prev().hide();
+            $(this).show();
+        });
+     
+     
+      }
+      else
+      {
+        $('[sprache="en"]').each(function(){
+            $(this).hide();
+            $(this).prev().show();
+        });
+  
+ 
+     
+      }
+    });
 });

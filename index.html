@@ -23,22 +23,22 @@
     </head>
     <body id="page-top">
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
-       </nav>>
-            <div class="container px-4 px-lg-5">
+
+            <div class="container mt-3 px-4 px-lg-5 mb-3">
                 <div class="row ">
                     <div class="col-lg-11">
                         <a class="navbar-brand" href="#page-top">AND NOW?</a>
                     </div>
                     <div class="col col-auto">
                         <i class="fa fa-language" aria-hidden="true"></i>
-                        <select class="selectpicker" data-width="fit">
-                            <option data-content='<span class="flag-icon flag-icon-us"></span> English'>EN</option>
-                            <option  data-content='<span class="flag-icon flag-icon-mx"></span> Español'>DE</option>
+                        <select id="langselector" class="selectpicker" data-width="fit">
+                            <option value="de"> DE</option>
+                            <option value="en"> EN</option>
                         </select>
                     </div>
                 </div>
 
+                <!--
                 <div class="row">
                     <div class="col-lg-12">
                         <button type="button" class="btn ">
@@ -51,6 +51,7 @@
                         </button>
                     </div>
                 </div>
+            -->
             </div> <!-- end of container -->
 
         <!-- Masthead-->
@@ -83,27 +84,43 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="staticBackdropLabel">Geld</h5>
+          <h5 class="modal-title" id="staticBackdropLabel" sprache="en">Money</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-           <p class="h4"> Bis du 18 (oder 21) Jahre alt bist:</p>
-            Du bekommst Jugendhilfe nach § 41 SGB VIII, das heißt du bekommst Geld vom Jugendamt oder über die Einrichtung in der du wohnst. 
-            
-            <br/>
-            <p class="h4"> Wenn du 18 Jahre oder älter bist:</p> Wenn entschieden wird, dass die Jugendhilfe für dich endet, erhältst du Leistungen nach dem Asylbewerberleistungsgesetz (SGB XII oder SGB II). Das bedeutet, dass die Unterkunft und das Essen in dieser Unterkunft für dich bezahlt wird. Zusätzlich bekommst du monatlich Geld vom Landesamt für Flüchtlingsangelegenheiten (LAF), das zum Beispiel für Dinge gedacht ist, die du im Alltag in deinem Leben brauchst. Das LAF kann das Geld direkt auf dein Bankkonto überweisen oder dir direkt im Büro ausbezahlen. 
-            <br/>
-            <p class="h4">  Bankkonto:</p>
-            Darfst du ein Konto eröffnen? Ja, jeder Mensch hat in Deutschland das Recht ein Bankkonto zu eröffnen. Es ist bei jeder Bank möglich und es ist dein Recht. Die Bank kann bestraft werden, wenn sie sich weigert. Man braucht für die Eröffnung eines Kontos einen gültigen Ausweis, d.h. entweder einen gültigen Reisepass, eine Aufenthaltsgenehmigung oder eine Duldung (es muss mit Foto und Angaben zu deiner Person sein). Am besten bringst du auch eine Meldebescheinigung mit zur Bank, wenn du ein Bankkonto eröffnen möchtest. Eine Meldebescheinigung ist eine Anmeldung, die nachweist wo du wohnst (die Anmeldung bekommst du beim Bürgeramt). Falls du noch unter 18 bist, brauchst du deinen Vormund, der den Antrag auf eine Bankkontoeröffnung auch unterschreiben muss. Hier findest du weitere Infos: <a href="https://www.financescout24.de/wissen/ratgeber/kontoeroeffnung-fuer-fluechtlinge"></a> 
-            Bei der Berliner Sparkasse in der Filiale Berliner Str. 40-41, 10715 Berlin gibt es konkret für Geflüchtete eine Beratung. Andere Banken funktionieren aber natürlich auch, wie die GLS Bank, die Norisbank, usw. 
-            Es ist wichtig, dass du immer genug Geld auf dem Konto hast und nicht ins Minus kommst. 
-            <br/>
-            <p class="h4">Inkasso:</p>
-            Wenn Rechnungen nicht bezahlt sind, kann es sein, dass du von einem Inkasso-Unternehmen Post bekommst. Das ist erstmal kein Grund zur Panik, das heißt nur, du solltest die Rechnungen jetzt wirklich bezahlen. Falls das nicht möglich ist und auch in der nächsten Zeit nicht möglich sein wird, kannst du dich an eine Schuldenberatung wenden. Die Caritas z.B. hat hier ein Angebot (sib.mitte@caritas-berlin.de)  
- 
+            <div sprache="de">
+                <p class="h4"> Bis du 18 (oder 21) Jahre alt bist:</p>
+                Du bekommst Jugendhilfe nach § 41 SGB VIII, das heißt du bekommst Geld vom Jugendamt oder über die Einrichtung in der du wohnst. 
+                
+                <br/>
+                <p class="h4"> Wenn du 18 Jahre oder älter bist:</p> Wenn entschieden wird, dass die Jugendhilfe für dich endet, erhältst du Leistungen nach dem Asylbewerberleistungsgesetz (SGB XII oder SGB II). Das bedeutet, dass die Unterkunft und das Essen in dieser Unterkunft für dich bezahlt wird. Zusätzlich bekommst du monatlich Geld vom Landesamt für Flüchtlingsangelegenheiten (LAF), das zum Beispiel für Dinge gedacht ist, die du im Alltag in deinem Leben brauchst. Das LAF kann das Geld direkt auf dein Bankkonto überweisen oder dir direkt im Büro ausbezahlen. 
+                <br/>
+                <p class="h4">  Bankkonto:</p>
+                Darfst du ein Konto eröffnen? Ja, jeder Mensch hat in Deutschland das Recht ein Bankkonto zu eröffnen. Es ist bei jeder Bank möglich und es ist dein Recht. Die Bank kann bestraft werden, wenn sie sich weigert. Man braucht für die Eröffnung eines Kontos einen gültigen Ausweis, d.h. entweder einen gültigen Reisepass, eine Aufenthaltsgenehmigung oder eine Duldung (es muss mit Foto und Angaben zu deiner Person sein). Am besten bringst du auch eine Meldebescheinigung mit zur Bank, wenn du ein Bankkonto eröffnen möchtest. Eine Meldebescheinigung ist eine Anmeldung, die nachweist wo du wohnst (die Anmeldung bekommst du beim Bürgeramt). Falls du noch unter 18 bist, brauchst du deinen Vormund, der den Antrag auf eine Bankkontoeröffnung auch unterschreiben muss. Hier findest du weitere Infos: <a href="https://www.financescout24.de/wissen/ratgeber/kontoeroeffnung-fuer-fluechtlinge"></a> 
+                Bei der Berliner Sparkasse in der Filiale Berliner Str. 40-41, 10715 Berlin gibt es konkret für Geflüchtete eine Beratung. Andere Banken funktionieren aber natürlich auch, wie die GLS Bank, die Norisbank, usw. 
+                Es ist wichtig, dass du immer genug Geld auf dem Konto hast und nicht ins Minus kommst. 
+                <br/>
+                <p class="h4">Inkasso:</p>
+                Wenn Rechnungen nicht bezahlt sind, kann es sein, dass du von einem Inkasso-Unternehmen Post bekommst. Das ist erstmal kein Grund zur Panik, das heißt nur, du solltest die Rechnungen jetzt wirklich bezahlen. Falls das nicht möglich ist und auch in der nächsten Zeit nicht möglich sein wird, kannst du dich an eine Schuldenberatung wenden. Die Caritas z.B. hat hier ein Angebot (sib.mitte@caritas-berlin.de)  
+    
          </div>
+
+         <div sprache="en">
+            <p class="h4"> Until you are 18 (or 21) years old:</p>
+            You will get support through the so called "Jugendhilfe" according to § 41 SGB VIII. This means you will get money through the youth welfare service called "Jugendamt" or through the responsible person in the accommodation you live         
+              <br/>
+            <p class="h4"> Once you have turned 18 years old (or are already older):</p> Once it has been decided that you will no longer receive support ("Jugendhilfe") through the youth welfare service, you will receive support through a different law, the law for asylum seeker support (in SGB XII or SGB II). That means that your accommodation will be paid by the state and often in the accommodation 3-meals per day are included. In case the food is not included, you will receive some extra money for that. Additionally, you will receive monthly a certain amount of money by the LAF (the office of Berlin for everthing concerning refugees). With this amount of money you can by things you need in your daily life. The LAF can transfer the money to your bank account monthly or pay it out in their offices. 
+               <br/>
+            <p class="h4">  Bank account:</p>
+            Are you allowed to have your own bank account? Yes, every person in Germany has the right to open a bank account. It is possible in every bank and it is your right. The bank can also be punished in case they won't allow it to you to open a bank account. In order to open up a bank account, you need a valid ID, that means either a valid passport, a residence permit or a so called "Duldung", the exceptional leave to remain. Your ID document needs a picture of you and your personal data. To be on the safe side, you can bring a registration certificate, a paper that states where you live and that you are registered there (you can get this registration certificate in a Bürgeramt, an office that can be found in every district of Berlin.). 
+            In case you are not 18 yet, you will need your guardian to come with you, because he or she will also need to sign your application for a bank account. You can find more info here: https://www.financescout24.de/wissen/ratgeber/kontoeroeffnung-fuer-fluechtlinge#english-version 
+            At the bank Berliner Sparkasse in their offices at Berliner Str. 40-41, 10715 Berlin, you can get specific consultation for refugees. Other banks like GLS Bank or Norisbank, should work as well. It is important that you take care of having enough money on your bank account and that you don't spend more money than you have getting into minus.   <br/>
+            <p class="h4">Inkasso:</p>
+            In case you buy things and cannot pay, it is possible that you will get a letter from a Inkasso organisation. This doesn't mean that you should panic now, it just means that you now should really pay the open bills. In case that is not possible now and you also don't see how it is possible in the future, you can get support and advice from a debt counseling organisation. For example, Caritas has an offer here: sib.mitte@caritas-berlin.de. 
+     </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-       
+        </div>
         </div>
       </div>
     </div>
@@ -115,50 +132,43 @@
                 <div class="row gx-4 gx-lg-5">
                     <button class="col-lg-3 col-md-6 text-center btn btn-primary btn-lg  type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"">
                         <div class="mt-5">
-                            <div class="mb-2"><i class="bi-gem fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">Money/Geld</h3>
+                            <div class="mb-2"><i class="bi-currency-euro fs-1 text-primary"></i></div>
+                            <h3 class="h4 mb-2" sprache="de">Geld</h3>
+                            <h3 class="h4 mb-2" sprache="en">Money</h3>
                        
                         </div>
                     </button>
                     <div class="col-lg-3 col-md-6 text-center">
                         <div class="mt-5">
-                            <div class="mb-2"><i class="bi-laptop fs-1 text-primary"></i></div>
+                            <div class="mb-2"><i class="bi-house-fill fs-1 text-primary"></i></div>
                             <h3 class="h4 mb-2">Wohnen</h3>
+                            <h3 class="h4 mb-2" sprache="en">Living</h3>
               
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 text-center">
                         <div class="mt-5">
-                            <div class="mb-2"><i class="bi-globe fs-1 text-primary"></i></div>
+                            <div class="mb-2"><i class="bi-heart fs-1 text-primary"></i></div>
                             <h3 class="h4 mb-2">Familienzusammenführung</h3>
+                            <h3 class="h4 mb-2" sprache="en">Family Unification</h3>
                    
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 text-center">
                         <div class="mt-5">
-                            <div class="mb-2"><i class="bi-heart fs-1 text-primary"></i></div>
+                            <div class="mb-2"><i class="bi-book-fill fs-1 text-primary"></i></div>
                             <h3 class="h4 mb-2">Recht & Asyl</h3>
+                            <h3 class="h4 mb-2" sprache="en">Rights & Asylum</h3>
            
                         </div>
                     </div>
+
+
                     <div class="col-lg-3 col-md-6 text-center">
                         <div class="mt-5">
-                            <div class="mb-2"><i class="bi-heart fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">Schule, Ausbildung & Arbeit</h3>
-           
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <div class="mb-2"><i class="bi-heart fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">Beratung & Hilfe</h3>
-           
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <div class="mb-2"><i class="bi-heart fs-1 text-primary"></i></div>
+                            <div class="mb-2"><i class=" bi bi-card-list fs-1 text-primary"></i></div>
                             <h3 class="h4 mb-2">Abkürzungen und deutsche Begriffe</h3>
+                            <h3 class="h4 mb-2" sprache="en">German expressions and terms</h3>
            
                         </div>
                     </div>
@@ -176,7 +186,9 @@
         <!-- SimpleLightbox plugin JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
         <!-- Core theme JS-->
+        <script src="js/jquery-3.6.0.min.js"></script>
         <script src="js/scripts.js"></script>
+
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <!-- * *                               SB Forms JS                               * *-->
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
