@@ -48,10 +48,7 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
-    // Activate SimpleLightbox plugin for portfolio items
-    new SimpleLightbox({
-        elements: '#portfolio a.portfolio-box'
-    });
+
 
 });
 
@@ -89,4 +86,41 @@ $(document).ready(function(){
      
       }
     });
+
+    $(".lesen").on("click", function(){
+
+        if(window.reading){
+            window.reading = false;
+            window.speechSynthesis.cancel()
+            return;
+        }
+        
+        var msg = new SpeechSynthesisUtterance();
+        let lang =  $('#langselector').val()
+   
+        msg.lang='de-DE';
+        msg.text = $(this).parent().next().first().text()
+        if(lang == "en"){
+            msg.lang='en-US';
+            msg.text = $(this).parent().next().children().eq(1).text()
+        }
+   
+       window.speechSynthesis.speak(msg);
+       window.reading = true;
+
+    });
+
+    $(".btn-close").on("click", function(){
+        window.speechSynthesis.cancel()
+        window.reading = false;
+        
+    })
+
+    $(".modal-footer button").on("click", function(){
+        window.speechSynthesis.cancel()
+        window.reading = false;
+        
+    })
+
+
 });
